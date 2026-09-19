@@ -1,0 +1,2 @@
+# Keep exported/source PDFs out of the repo
+*.pdf
