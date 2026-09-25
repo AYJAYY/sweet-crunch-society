@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zesty Garlic Dill Refrigerator Pickles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@400;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1B2A49; /* society navy */
+    --dill: #1B2A49;
+    --gold: #C9A24B; /* gold foil */
+    --gold-text: #E8C874; /* lighter gold for text on navy (8.8:1) */
+    --cream: #FBF6EA;
+    --brick: #7B1E2B; /* burgundy */
+    --ink: #222;
+    --line: #DCD2B8;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0; background: #ddd; color: var(--ink);
+    font-family: 'Lato', system-ui, sans-serif; font-size: 10.5pt; line-height: 1.35;
+  }
+  /* Letter sheet: fixed size so screen preview matches print */
+  .sheet {
+    width: 8.5in; height: 11in; margin: 0 auto; background: var(--cream);
+    padding: 0.28in 0.4in; position: relative; overflow: hidden;
+  }
+  @page { size: 8.5in 11in; margin: 0; }
+  @media print {
+    body { background: none; }
+    .sheet { margin: 0; }
+  }
+  @media (max-width: 8.6in) { .sheet { transform-origin: top left; } }
+
+  h1, h2, h3 { margin: 0; font-weight: 700; }
+
+  /* Header banner */
+  header {
+    background: var(--green); color: #fff; border-radius: 10px;
+    border-bottom: 6px solid var(--gold);
+    padding: 0.09in 0.3in 0.09in 0.3in; position: relative; min-height: 0.85in;
+  }
+  header .kicker {
+    font-family: 'Oswald', sans-serif; letter-spacing: .2em; font-size: 9pt;
+    color: var(--gold-text); text-transform: uppercase; font-weight: 500;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif; font-weight: 900;
+    font-size: 24pt; line-height: 1.08; margin: 2px 0 4px; max-width: 4.5in;
+  }
+  header .sub { font-family: 'Oswald', sans-serif; font-size: 11pt; letter-spacing: .06em; font-weight: 500; }
+
+  /* Stat strip */
+  .stats {
+    list-style: none; padding: 0; margin: 0.08in 0; display: grid;
+    grid-template-columns: repeat(3, 1fr); gap: 6px;
+  }
+  .stats li {
+    background: #fff; border: 1.5px dashed var(--green); border-radius: 6px;
+    padding: 3px 8px; display: flex; flex-direction: row; align-items: baseline; gap: 6px; flex-wrap: wrap;
+  }
+  .stats .k { font-family: 'Oswald', sans-serif; font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; color: var(--brick); }
+  .stats .v { font-weight: 900; color: var(--dill); font-size: 10pt; }
+
+  /* Main two columns */
+  .cols { display: grid; grid-template-columns: 3.05in 1fr; gap: 0.2in; }
+  h2.sec {
+    font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .08em;
+    font-size: 14pt; color: var(--dill); border-bottom: 3px solid var(--gold);
+    padding-bottom: 2px; margin-bottom: 6px;
+  }
+
+  .ingredients { background: #fff; border: 2px solid var(--green); border-radius: 8px; padding: 0.1in 0.14in 0.06in; }
+  .ingredients ul { list-style: none; margin: 0; padding: 0; }
+  .ingredients li { display: flex; gap: 7px; align-items: baseline; padding: 2.5px 0; border-bottom: 1px dotted var(--line); }
+  .ingredients li:last-child { border-bottom: 0; }
+  .box { flex: none; width: 10px; height: 10px; border: 1.5px solid var(--dill); border-radius: 2px; transform: translateY(1px); }
+  .ingredients b { color: var(--brick); font-weight: 900; }
+
+  .why {
+    margin-top: 0.05in; background: var(--green); box-shadow: inset 0 -5px 0 var(--gold); border-radius: 8px; padding: 0.07in 0.14in;
+    position: relative;
+  }
+  .why h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .1em; font-size: 10pt; color: var(--gold-text); }
+  .why p { margin: 3px 0 0; font-size: 9.5pt; color: #fff; }
+
+  ol.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; }
+  ol.steps li { counter-increment: s; position: relative; padding: 0 0 0 0.44in; margin-bottom: 0.025in; }
+  ol.steps li::before {
+    content: counter(s); position: absolute; left: 0; top: -1px; width: 0.32in; height: 0.32in;
+    border-radius: 50%; background: var(--brick); color: #fff;
+    display: flex; align-items: center; justify-content: center; line-height: 1;
+    font-family: 'Playfair Display', serif; font-weight: 700; font-size: 12pt;
+    font-variant-numeric: lining-nums; /* old-style figures sit off-center in the dot */
+  }
+  ol.steps b { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .06em; color: var(--dill); font-size: 11pt; display: block; }
+
+  /* Customizations */
+  .custom { margin-top: 0.08in; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.09in; }
+  .card { background: #fff; border: 2px solid var(--green); border-top: 6px solid var(--green); border-radius: 8px; padding: 0.04in 0.12in 0.04in; break-inside: avoid; }
+  .card h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .07em; font-size: 11pt; color: var(--brick); margin-bottom: 3px; }
+  .card ul { margin: 0; padding-left: 16px; font-size: 9pt; line-height: 1.28; }
+  .card li { margin-bottom: 1px; }
+  .card li::marker { color: var(--gold); }
+
+  footer {
+    position: absolute; left: 0.4in; right: 0.4in; bottom: 0.2in; text-align: center;
+    font-family: 'Oswald', sans-serif; letter-spacing: .12em; text-transform: uppercase; font-size: 8pt; color: var(--dill);
+    border-top: 2px solid var(--green); padding-top: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header>
+    <div class="kicker">&#9733; Sweet Crunch Society &#9733; Recipe Collection</div>
+    <h1>Zesty Garlic Dill Refrigerator Pickles</h1>
+    <div class="sub">Refrigerator Recipe &amp; Customization Guide</div>
+  </header>
+
+  <ul class="stats">
+    <li><span class="k">Style</span><span class="v">Refrigerator (No Canning)</span></li>
+    <li><span class="k">Prep Time</span><span class="v">20 mins + 2 hr soak</span></li>
+    <li><span class="k">Profile</span><span class="v">Savory &amp; Garlicky</span></li>
+    <li><span class="k">Cucumber</span><span class="v">European / English</span></li>
+    <li><span class="k">Yield</span><span class="v">Approx. 2 Pint Jars</span></li>
+    <li><span class="k">Peak Flavor</span><span class="v">Days 3–10</span></li>
+  </ul>
+
+  <main>
+    <div class="cols">
+      <section aria-labelledby="ing">
+        <div class="ingredients">
+          <h2 class="sec" id="ing">Ingredients</h2>
+          <ul>
+            <li><span class="box"></span><span><b>2 large</b> European cucumbers (1/4" rounds or spears)</span></li>
+            <li><span class="box"></span><span><b>2 tbsp</b> Kosher salt (for soak)</span></li>
+            <li><span class="box"></span><span><b>2 cups</b> Ice cubes (for soaking)</span></li>
+            <li><span class="box"></span><span><b>1 1/2 cups</b> Distilled white vinegar (5%)</span></li>
+            <li><span class="box"></span><span><b>1 cup</b> Water</span></li>
+            <li><span class="box"></span><span><b>1 tbsp</b> Kosher salt (for brine)</span></li>
+            <li><span class="box"></span><span><b>1 tsp</b> Granulated white sugar</span></li>
+            <li><span class="box"></span><span><b>6 cloves</b> Garlic, smashed</span></li>
+            <li><span class="box"></span><span><b>4 sprigs</b> Fresh dill (or 1 tsp dill seed)</span></li>
+            <li><span class="box"></span><span><b>1 tsp</b> Black peppercorns</span></li>
+            <li><span class="box"></span><span><b>1/2 tsp</b> Yellow mustard seed</span></li>
+            <li><span class="box"></span><span><b>1/4 tsp</b> Coriander seed</span></li>
+            <li><span class="box"></span><span><b>2 whole</b> Fresh bay leaves</span></li>
+            <li><span class="box"></span><span><b>1/4 tsp</b> Calcium chloride (1/8 tsp per jar)</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="prep">
+        <h2 class="sec" id="prep">Preparation Steps</h2>
+        <ol class="steps">
+          <li><b>Moisture Draw</b>Toss sliced cucumbers in a colander with salt, top with ice, and drain 2 hours in the fridge over a bowl. Rinse briefly &amp; pat thoroughly dry. <em>Do not skip — this step prevents shriveling by pre-drawing moisture before cucumbers hit the brine.</em></li>
+          <li><b>Craft Garlic Brine</b>Combine vinegar, water, salt, sugar, peppercorns, mustard seed, and coriander; simmer 2–3 mins. Add smashed garlic; simmer 1 more minute. Cool to room temp, then refrigerate until fully cold before using.</li>
+          <li><b>Pack Jars</b>Place 1 bay leaf, 3 garlic cloves (from brine), 2 dill sprigs, and 1/8 tsp calcium chloride in each jar. Pack cucumber slices snugly into clean pint jars.</li>
+          <li><b>Submerge &amp; Chill</b>Pour cold brine over veggies until submerged. If slices poke above the brine, top up with a splash of white vinegar (5%). Seal tight and place directly in the fridge.</li>
+          <li><b>Aging &amp; Storage</b>Wait at least 48–72 hours before eating. Flavor peaks <span style="white-space:nowrap">days 3–10</span>; keeps up to 3–4 weeks.</li>
+        </ol>
+      </section>
+    </div>
+
+    <section class="custom" aria-labelledby="cust">
+      <h2 class="sec" id="cust">Customizations &amp; Recipe Alterations</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Garlic Intensity</h3>
+          <ul>
+            <li><b>Extra Garlicky:</b> Double the cloves to 6 per jar for a bold, assertive bite.</li>
+            <li><b>Roasted Garlic:</b> Roast cloves before adding for a mellow, caramelized sweetness.</li>
+            <li><b>Garlic Scapes:</b> Swap cloves for sliced scapes when in season for a milder, grassy garlic flavor.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Herb &amp; Spice Variations</h3>
+          <ul>
+            <li><b>Dill Seed:</b> Swap fresh sprigs for 1 tsp dill seed per jar for deeper, earthier flavor.</li>
+            <li><b>Tarragon:</b> Add 1 sprig per jar for a subtle anise note alongside the dill.</li>
+            <li><b>Peppercorn Blend:</b> Use a mix of black, white, and pink peppercorns for a more complex bite.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Texture &amp; Cut Options</h3>
+          <ul>
+            <li><b>Spears:</b> Quarter cucumbers lengthwise for classic deli-style garlic spears.</li>
+            <li><b>Coins:</b> Keep 1/4" rounds as written for snacking and charcuterie boards.</li>
+            <li><b>Thick-Cut:</b> Slice at 3/8-inch thickness for extra crunch and chew.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Process &amp; Storage Notes</h3>
+          <ul>
+            <li><b>Raw Packing:</b> Cold brine over raw veggies preserves maximum crunch — salt/ice soak must come first. Skipping it causes shriveling.</li>
+            <li><b>Drying Secret:</b> Thorough drying post-soak prevents brine dilution.</li>
+            <li><b>Storage Life:</b> Best consumed within 3–4 weeks in cold storage.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Sweet Crunch Society &bull; Zesty Garlic Dill Refrigerator Pickles &bull; Fresh Refrigerator Guide</footer>
+</div>
+</body>
+</html>
