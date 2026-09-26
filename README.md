@@ -2,7 +2,9 @@
 
 A printable, single-page recipe card for **Sweet Kirby Bread & Butter Pickles**, a refrigerator (no-canning) clone of the store-bought classic. A second card, `index-zesty.html`, covers **Zesty Garlic Dill Refrigerator Pickles**.
 
-![Preview of the printed recipe card](docs/preview.png)
+![Preview of the Sweet Kirby Bread & Butter Pickles card](docs/preview.png)
+
+![Preview of the Zesty Garlic Dill Refrigerator Pickles card](docs/preview-zesty.png)
 
 ## Warnings
 
