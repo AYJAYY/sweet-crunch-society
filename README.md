@@ -1,6 +1,6 @@
 # Sweet Crunch Society
 
-A printable, single-page recipe card for **Sweet European Bread & Butter Pickles**, a refrigerator (no-canning) clone of the store-bought classic.
+A printable, single-page recipe card for **Sweet Kirby Bread & Butter Pickles**, a refrigerator (no-canning) clone of the store-bought classic. A second card, `index-zesty.html`, covers **Zesty Garlic Dill Refrigerator Pickles**.
 
 ![Preview of the printed recipe card](docs/preview.png)
 
@@ -21,7 +21,7 @@ Sources: [UMN Extension: Pickling basics](https://extension.umn.edu/preserving-a
 
 ## Why
 
-Store-bought bread & butter pickles are sweet, tangy, and very crunchy. This recipe recreates that at home with European cucumbers, a salt-and-ice soak, and calcium chloride for extra snap. The card is one self-contained HTML file that prints cleanly on US Letter paper, so it can live on the fridge or in a recipe binder.
+Store-bought bread & butter pickles are sweet, tangy, and very crunchy. This recipe recreates that at home with Kirby pickling cucumbers, a salt-and-ice soak, and calcium chloride for extra snap. Kirbys are used because they are firmer and lower in water than European cucumbers, which shriveled in early test batches. The card is one self-contained HTML file that prints cleanly on US Letter paper, so it can live on the fridge or in a recipe binder.
 
 ## The recipe at a glance
 
@@ -41,4 +41,4 @@ Store-bought bread & butter pickles are sweet, tangy, and very crunchy. This rec
 
 ## Editing the recipe
 
-All recipe text is plain HTML in `index.html`. Ingredients are `<li>` items in the Ingredients section, steps are `<li>` items in the Preparation Steps `<ol>`, and the four customization cards are at the bottom. The page is fixed to one Letter sheet, so if you add a lot of text, check the print preview for overflow.
+All recipe text is plain HTML in `index.html` (sweet B&B) and `index-zesty.html` (garlic dill). Ingredients are `<li>` items in the Ingredients section, steps are `<li>` items in the Preparation Steps `<ol>`, and the four customization cards are at the bottom. The page is fixed to one Letter sheet, so if you add a lot of text, check the print preview for overflow.
