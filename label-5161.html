@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Crunch Society — Jar Labels (Avery 5161)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Oswald:wght@500;700&family=Lato:wght@400;700&display=swap');
+
+    :root {
+      --navy:      #1B2A49;
+      --gold:      #C9A24B;
+      --gold-text: #E8C874;
+      --cream:     #FBF6EA;
+      --line:      #DCD2B8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #d8d4cd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .no-print {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.6;
+    }
+    .no-print strong { color: var(--navy); }
+
+    /* Avery 5161: 8.5" × 11", 2 cols × 10 rows, label 4" × 1"
+       Top margin 0.5", side margins 3/16", column gap 3/16" */
+    .sheet {
+      width: 8.5in;
+      height: 11in;
+      background: white;
+      padding: 0.5in 0.1875in 0 0.1875in;
+      display: grid;
+      grid-template-columns: 4in 4in;
+      grid-template-rows: repeat(10, 1in);
+      column-gap: 0.1875in;
+      row-gap: 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.18);
+    }
+
+    .label {
+      width: 4in;
+      height: 1in;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 0.5pt solid var(--gold);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .label-brand {
+      background: var(--navy);
+      color: var(--gold-text);
+      font-family: 'Oswald', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 2.5pt 4pt;
+      flex-shrink: 0;
+    }
+
+    .label-type {
+      background: var(--cream);
+      color: var(--navy);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 10.5pt;
+      padding: 3pt 7pt 1pt;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .label-date {
+      background: var(--cream);
+      color: #555;
+      font-family: 'Lato', sans-serif;
+      font-size: 7pt;
+      padding: 2pt 7pt 3pt;
+      border-top: 0.5pt solid var(--line);
+      flex-shrink: 0;
+    }
+
+    @media print {
+      @page { size: letter portrait; margin: 0; }
+      body { background: none; padding: 0; }
+      .no-print { display: none; }
+      .sheet { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <strong>Avery 5161 &mdash; 1&quot; &times; 4&quot; labels &mdash; 20 per sheet</strong><br>
+    Print at 100% scale &bull; Disable &ldquo;Fit to page&rdquo; scaling &bull; Left column: Sweet B&amp;B &bull; Right column: Zesty Dill
+  </div>
+
+  <div class="sheet" id="sheet"></div>
+
+  <script>
+    const labels = [
+      {
+        type: 'Golden Bread &amp; Butter Pickles',
+        col: 'bb'
+      },
+      {
+        type: 'Zesty Garlic Dill Pickles',
+        col: 'dill'
+      }
+    ];
+
+    const sheet = document.getElementById('sheet');
+    let html = '';
+
+    for (let row = 0; row < 10; row++) {
+      for (const label of labels) {
+        html += `
+          <div class="label label-${label.col}">
+            <div class="label-brand">&#9734; Sweet Crunch Society &#9734;</div>
+            <div class="label-type">${label.type}</div>
+            <div class="label-date">Pack Date: _____________________</div>
+          </div>`;
+      }
+    }
+
+    sheet.innerHTML = html;
+  </script>
+
+</body>
+</html>
