@@ -42,7 +42,7 @@
   header {
     background: var(--green); color: #fff; border-radius: 10px;
     border-bottom: 6px solid var(--gold);
-    padding: 0.09in 0.3in 0.09in 0.3in; position: relative; min-height: 0.85in;
+    padding: 0.07in 0.3in 0.07in 0.3in; position: relative; min-height: 0.85in;
   }
   header .kicker {
     font-family: 'Oswald', sans-serif; letter-spacing: .2em; font-size: 9pt;
@@ -71,7 +71,7 @@
   h2.sec {
     font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .08em;
     font-size: 14pt; color: var(--dill); border-bottom: 3px solid var(--gold);
-    padding-bottom: 2px; margin-bottom: 6px;
+    padding-bottom: 2px; margin-bottom: 4px;
   }
 
   .ingredients { background: #fff; border: 2px solid var(--green); border-radius: 8px; padding: 0.1in 0.14in 0.06in; }
@@ -89,7 +89,7 @@
   .why p { margin: 3px 0 0; font-size: 9.5pt; color: #fff; }
 
   ol.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; }
-  ol.steps li { counter-increment: s; position: relative; padding: 0 0 0 0.44in; margin-bottom: 0.025in; }
+  ol.steps li { counter-increment: s; position: relative; padding: 0 0 0 0.44in; margin-bottom: 0.01in; }
   ol.steps li::before {
     content: counter(s); position: absolute; left: 0; top: -1px; width: 0.32in; height: 0.32in;
     border-radius: 50%; background: var(--brick); color: #fff;
@@ -108,7 +108,7 @@
   .card ul { margin: 0; padding-left: 16px; font-size: 9pt; line-height: 1.28; }
   .card li { margin-bottom: 1px; }
   .card.wide { grid-column: 1 / -1; }
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25in; }
+  .split { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 0.25in; }
   .split > div + div { position: relative; }
   .split > div + div::before { content: ""; position: absolute; left: -0.125in; top: 0; bottom: 0; border-left: 1.5px dotted var(--gold); }
   .card h4 { margin: 0 0 1px; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .08em; font-size: 8.5pt; color: var(--dill); }
@@ -204,7 +204,6 @@
               <ul>
                 <li><b>Cane Sugar:</b> 1:1 for white sugar. Rounder, slightly warmer.</li>
                 <li><b>Demerara:</b> 1:1 for white sugar. Light toffee flavor, slightly richer.</li>
-                <li><b>Honey:</b> Use <strong>3/4 cup honey</strong> per <strong>1 cup white sugar</strong>. Floral, more complex, less classic.</li>
                 <li><b>Turbinado:</b> 1:1 for white sugar. Slightly deeper, faint molasses flavor.</li>
               </ul>
             </div>
@@ -213,6 +212,7 @@
               <ul>
                 <li><b>Dark Brown Sugar:</b> Swap <strong>1/4 cup light brown sugar</strong> for <strong>1/4 cup dark brown sugar</strong>. Deeper caramel.</li>
                 <li><b>Granulated Panela:</b> Swap <strong>1/4 cup light brown sugar</strong> for <strong>1/4 cup granulated panela</strong>. Earthy, caramel-like.</li>
+                <li><b>Honey:</b> Swap <strong>1/4 cup white sugar</strong> for <strong>3 tbsp honey</strong>. Floral, more complex.</li>
                 <li><b>Lyle's Golden Syrup:</b> Swap <strong>1/4 cup white sugar</strong> for <strong>1/4 cup golden syrup</strong>. Buttery, toasty.</li>
                 <li><b>Muscovado Sugar:</b> Swap <strong>1/4 cup light brown sugar</strong> for <strong>1/4 cup muscovado sugar</strong>. Stickier, bolder molasses.</li>
               </ul>
