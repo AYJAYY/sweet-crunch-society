@@ -109,6 +109,8 @@
   .card li { margin-bottom: 1px; }
   .card.wide { grid-column: 1 / -1; }
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25in; }
+  .split > div + div { position: relative; }
+  .split > div + div::before { content: ""; position: absolute; left: -0.125in; top: 0; bottom: 0; border-left: 1.5px dotted var(--gold); }
   .card h4 { margin: 0 0 1px; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .08em; font-size: 8.5pt; color: var(--dill); }
   .card li::marker { color: var(--gold); }
   .card li strong { color: var(--brick); font-weight: 900; } /* inline amounts */
