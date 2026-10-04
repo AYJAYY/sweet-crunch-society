@@ -31,7 +31,7 @@ Store-bought bread & butter pickles are sweet, tangy, and very crunchy. This rec
 |---|---|
 | **Style** | Refrigerator, no canning |
 | **Prep time** | 20 mins + 2 hr soak |
-| **Yield** | About 2 pint jars |
+| **Yield** | 2 pint jars |
 | **Peak flavor** | Days 5-14 |
 
 ## Accessibility
