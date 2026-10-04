@@ -107,6 +107,9 @@
   .card h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .07em; font-size: 11pt; color: var(--brick); margin-bottom: 3px; }
   .card ul { margin: 0; padding-left: 16px; font-size: 9pt; line-height: 1.28; }
   .card li { margin-bottom: 1px; }
+  .card.wide { grid-column: 1 / -1; }
+  .card.wide ul { columns: 2; column-gap: 0.25in; }
+  .card.wide li { break-inside: avoid; }
   .card li::marker { color: var(--gold); }
   .card li strong { color: var(--brick); font-weight: 900; } /* inline amounts */
 
@@ -176,9 +179,10 @@
       <h2 class="sec" id="cust">Customizations &amp; Recipe Alterations</h2>
       <div class="grid">
         <div class="card">
-          <h3>Corn Syrup Swap (Commercial Character)</h3>
+          <h3>Corn Syrup Swaps</h3>
           <ul>
-<li><b>Commercial brine:</b> Use <strong>1 cup white sugar</strong>, <strong>1/4 cup brown sugar</strong>, and <strong>1/4 cup light corn syrup</strong> in place of the standard <strong>1 1/4 cups white sugar</strong> + <strong>1/4 cup brown sugar</strong>. Total sweetening stays roughly equivalent.</li>
+            <li><b>Commercial brine:</b> Use <strong>1 cup white sugar</strong>, <strong>1/4 cup brown sugar</strong>, and <strong>1/4 cup light corn syrup</strong> in place of the standard <strong>1 1/4 cups white sugar</strong> + <strong>1/4 cup brown sugar</strong>. Total sweetening stays roughly equivalent.</li>
+            <li><b>Extra sweet brine:</b> Use <strong>1 1/4 cups white sugar</strong>, <strong>1/4 cup brown sugar</strong>, and <strong>1/4 cup light corn syrup</strong>. This adds the corn syrup character on top of the full original sugar amount — noticeably sweeter than the base recipe.</li>
           </ul>
         </div>
         <div class="card">
@@ -189,16 +193,10 @@
             <li><b>Sweet Heat:</b> Add <strong>1/2 tsp red pepper flakes</strong> or jalapeño slices.</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>Corn Syrup Swap (Extra Sweet)</h3>
-          <ul>
-            <li><b>Extra sweet brine:</b> Use <strong>1 1/4 cups white sugar</strong>, <strong>1/4 cup brown sugar</strong>, and <strong>1/4 cup light corn syrup</strong>. This adds the corn syrup character on top of the full original sugar amount — noticeably sweeter than the base recipe.</li>
-          </ul>
-        </div>
-        <div class="card">
+        <div class="card wide">
           <h3>Sugar Alternatives &amp; Ratios</h3>
           <ul>
-            <li><b>Turbinado:</b> 1:1 for white sugar. Slightly deeper, faintly molasses-y.</li>
+            <li><b>Turbinado:</b> 1:1 for white sugar. Slightly deeper, faint molasses.</li>
             <li><b>Cane Sugar:</b> 1:1 for white sugar. Rounder, slightly warmer.</li>
             <li><b>Honey:</b> Use <strong>3/4 cup honey</strong> per <strong>1 cup white sugar</strong>. Floral, more complex, less classic.</li>
             <li><b>Dark Brown Sugar:</b> Swap the <strong>1/4 cup light brown sugar</strong> for dark. Deeper caramel.</li>
