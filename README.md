@@ -25,14 +25,19 @@ Sources: [UMN Extension: Pickling basics](https://extension.umn.edu/preserving-a
 
 Store-bought bread & butter pickles are sweet, tangy, and very crunchy. This recipe recreates that at home with Kirby pickling cucumbers, a salt-and-ice soak, and calcium chloride for extra snap. Kirbys are used because they are firmer and lower in water than European cucumbers, which shriveled in early test batches. The card is one self-contained HTML file that prints cleanly on US Letter paper, so it can live on the fridge or in a recipe binder.
 
-## The recipe at a glance
+## The recipes at a glance
 
-| Detail | Value |
-|---|---|
-| **Style** | Refrigerator, no canning |
-| **Prep time** | 20 mins + 2 hr soak |
-| **Yield** | 2 pint jars |
-| **Peak flavor** | Days 5-14 |
+| Detail | Golden Bread & Butter | Zesty Garlic Dill |
+|---|---|---|
+| **Style** | Refrigerator, no canning | Refrigerator, no canning |
+| **Profile** | Sweet & tangy | Savory & garlicky |
+| **Cut** | 3/8" rounds | Spears (quartered lengthwise) |
+| **Prep time** | 20 mins + 2 hr soak | 20 mins + 2 hr soak |
+| **Yield** | 2 pint jars | 2 pint jars |
+| **Brine** | 1 1/2 cups vinegar + 1 1/2 cups sugar (about 3.3% acidity once dissolved) | 1 1/2 cups vinegar + 1 cup water (about 3.0% acidity) |
+| **Min. chill** | 24-48 hours | 72 hours |
+| **Peak flavor** | Days 5-14 | Days 5-12 |
+| **Keeps** | Up to 1 month | Up to 3-4 weeks |
 
 ## Accessibility
 
