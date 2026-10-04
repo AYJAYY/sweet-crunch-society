@@ -110,6 +110,7 @@
   .card.wide { grid-column: 1 / -1; }
   .card.wide ul { columns: 2; column-gap: 0.25in; }
   .card.wide li { break-inside: avoid; }
+  .card.wide li.col-break { break-before: column; }
   .card li::marker { color: var(--gold); }
   .card li strong { color: var(--brick); font-weight: 900; } /* inline amounts */
 
@@ -199,11 +200,11 @@
           <h3>Sugar Alternatives &amp; Ratios</h3>
           <ul>
             <li><b>Cane Sugar:</b> 1:1 for white sugar. Rounder, slightly warmer.</li>
-            <li><b>Dark Brown Sugar:</b> Swap the <strong>1/4 cup light brown sugar</strong> for dark. Deeper caramel.</li>
             <li><b>Honey:</b> Use <strong>3/4 cup honey</strong> per <strong>1 cup white sugar</strong>. Floral, more complex, less classic.</li>
+            <li><b>Turbinado:</b> 1:1 for white sugar. Slightly deeper, faint molasses flavor.</li>
+            <li class="col-break"><b>Dark Brown Sugar:</b> Swap the <strong>1/4 cup light brown sugar</strong> for dark. Deeper caramel.</li>
             <li><b>Lyle's Golden Syrup:</b> Swap <strong>1/4 cup white sugar</strong> for <strong>1/4 cup</strong> syrup. Buttery, toasty.</li>
             <li><b>Muscovado:</b> Swap the <strong>1/4 cup light brown sugar</strong> for muscovado. Stickier, bolder molasses.</li>
-            <li><b>Turbinado:</b> 1:1 for white sugar. Slightly deeper, faint molasses flavor.</li>
           </ul>
         </div>
       </div>
